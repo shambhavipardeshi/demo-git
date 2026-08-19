@@ -52,6 +52,24 @@
         backdrop-filter: blur(18px);
       }
 
+      nav {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.25rem;
+        margin-bottom: clamp(3rem, 8vw, 6rem);
+        font-size: 0.76rem;
+      }
+
+      nav a {
+        color: #cbd5e1;
+        text-decoration: none;
+        transition: color 160ms ease;
+      }
+
+      nav a:hover, nav a[aria-current="page"] { color: #a5f3fc; }
+
       main::before {
         content: "";
         position: absolute;
@@ -131,6 +149,11 @@
     <div class="glow glow--one"></div>
     <div class="glow glow--two"></div>
     <main>
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <p class="eyebrow"><span class="dot"></span> A beautiful beginning</p>
       <h1>Hello,<br /><em>World.</em></h1>
       <p class="subtitle">

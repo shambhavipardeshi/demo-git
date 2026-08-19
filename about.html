@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>About · Hello, World!</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+      :root { color-scheme: dark; --ink:#f8fafc; --muted:#b6c3d6; --line:rgba(255,255,255,.18); }
+      * { box-sizing:border-box; }
+      body { min-height:100vh; margin:0; display:grid; place-items:center; background:#111827; color:var(--ink); font-family:"DM Mono",monospace; }
+      .glow { position:fixed; width:42rem; height:42rem; border-radius:50%; filter:blur(30px); opacity:.68; pointer-events:none; }
+      .one { background:#a78bfa; top:-24rem; right:-16rem; } .two { background:#2dd4bf; bottom:-27rem; left:-13rem; }
+      main { position:relative; width:min(92vw,920px); padding:clamp(2rem,7vw,5.5rem); border:1px solid var(--line); border-radius:28px; background:rgba(15,23,42,.62); box-shadow:0 28px 80px rgba(0,0,0,.35); backdrop-filter:blur(18px); }
+      main::before { content:""; position:absolute; inset:12px; border:1px solid rgba(255,255,255,.08); border-radius:18px; pointer-events:none; }
+      nav { position:relative; z-index:1; display:flex; justify-content:flex-end; gap:1.25rem; margin-bottom:clamp(3rem,8vw,6rem); font-size:.76rem; } nav a { color:#cbd5e1; text-decoration:none; } nav a:hover, nav a[aria-current="page"] { color:#a5f3fc; }
+      .eyebrow { color:#99f6e4; font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; }
+      h1 { max-width:720px; margin:.8rem 0 1.75rem; font-family:"Playfair Display",Georgia,serif; font-size:clamp(3.5rem,10vw,7rem); letter-spacing:-.07em; line-height:.92; }
+      h1 em { color:#c4b5fd; font-weight:600; }
+      .copy { max-width:620px; color:var(--muted); font-size:clamp(.9rem,2vw,1.05rem); line-height:1.9; }
+      .footer { display:flex; justify-content:space-between; gap:1rem; margin-top:4rem; padding-top:1.25rem; border-top:1px solid var(--line); color:#94a3b8; font-size:.72rem; }
+      @media (max-width:460px) { .footer { flex-direction:column; } }
+    </style>
+  </head>
+  <body>
+    <div class="glow one"></div><div class="glow two"></div>
+    <main>
+      <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></nav>
+      <p class="eyebrow">The story so far</p>
+      <h1>Made for the <em>first spark.</em></h1>
+      <p class="copy">This tiny corner of the web celebrates every beginning. Whether you are writing your first line or building your next big idea, curiosity is the only invitation you need.</p>
+      <div class="footer"><span>HELLO, WORLD!</span><span>KEEP EXPLORING ✦</span></div>
+    </main>
+  </body>
+</html>
