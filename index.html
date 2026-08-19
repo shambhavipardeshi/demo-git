@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>Hello, World!</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+
+      :root {
+        color-scheme: dark;
+        --ink: #f8fafc;
+        --muted: #b6c3d6;
+        --line: rgba(255, 255, 255, 0.18);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        background: #111827;
+        color: var(--ink);
+        font-family: "DM Mono", monospace;
+      }
+
+      .glow {
+        position: fixed;
+        width: 42rem;
+        height: 42rem;
+        border-radius: 50%;
+        filter: blur(30px);
+        opacity: 0.68;
+        pointer-events: none;
+      }
+
+      .glow--one { background: #e879f9; top: -24rem; left: -16rem; }
+      .glow--two { background: #22d3ee; bottom: -27rem; right: -13rem; }
+
+      main {
+        position: relative;
+        width: min(92vw, 920px);
+        padding: clamp(2rem, 7vw, 5.5rem);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: rgba(15, 23, 42, 0.62);
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(18px);
+      }
+
+      main::before {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0 0 1.5rem;
+        color: #a5f3fc;
+        font-size: 0.76rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .dot {
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background: #5eead4;
+        box-shadow: 0 0 20px #5eead4;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(4rem, 12vw, 8.5rem);
+        font-weight: 700;
+        letter-spacing: -0.075em;
+        line-height: 0.82;
+      }
+
+      h1 em {
+        display: block;
+        padding-left: 0.36em;
+        color: #f0abfc;
+        font-weight: 600;
+      }
+
+      .subtitle {
+        max-width: 470px;
+        margin: 2.25rem 0 0;
+        color: var(--muted);
+        font-size: clamp(0.9rem, 2vw, 1.05rem);
+        line-height: 1.8;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: clamp(2.5rem, 7vw, 5rem);
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--line);
+        color: #94a3b8;
+        font-size: 0.72rem;
+      }
+
+      @keyframes pulse {
+        50% { transform: scale(1.4); opacity: 0.65; }
+      }
+
+      @media (max-width: 460px) {
+        h1 em { padding-left: 0.16em; }
+        .footer { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow glow--one"></div>
+    <div class="glow glow--two"></div>
+    <main>
+      <p class="eyebrow"><span class="dot"></span> A beautiful beginning</p>
+      <h1>Hello,<br /><em>World.</em></h1>
+      <p class="subtitle">
+        One small line of code, and an entire universe of possibilities opens up.
+      </p>
+      <div class="footer">
+        <span>EST. 2026</span>
+        <span>MADE WITH CURIOSITY ✦</span>
+      </div>
+    </main>
+  </body>
+</html>
